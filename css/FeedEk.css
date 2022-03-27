@@ -1,0 +1,7 @@
+/* Modificación caja RSS */
+.feedEkList{width:300px; height:auto; list-style:none outside none;background-color:#E5E7E9; border:1px solid  #0D7A82; padding:4px 6px; color:#3E3E3E;}
+.feedEkList li{border-bottom:1px solid  #0D7A82; padding:5px;}
+.feedEkList li:last-child{border-bottom:none;}
+.itemTitle a{font-weight:bold; color: #0D7A82 !important; text-decoration:none }
+.itemTitle a:hover{ text-decoration:underline }
+.itemDate{font-size:11px;color:#AAAAAA;} 

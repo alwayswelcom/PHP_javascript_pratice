@@ -1,0 +1,86 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Practica obligatoria MasterD" />
+    <meta name="robots" content="NOFOLLOW" />
+    <meta name="Author" content="Alberto Arana Pinto" />
+    <meta name="keywords" content="Practica obligatoria" />
+    <meta name="lang" content="es" />
+    <meta name="revisit-after" content="2 days" />
+    <meta name="category" content="Práctica obligatoria" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <title>Práctica obligatoria</title>
+    <!-- Declaración de fichero de estilos -->
+
+    <style>
+        #mapa{
+            height: 400px;
+            width: 600px;
+            border: 1px solid #ff5e14;
+        }
+    </style>
+    <!-- Script mapa -->
+    <script>
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(function(position){
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+                var mymap = L.map('mapa', {
+                    center: [latitude, longitude],
+                    zoom: 12
+                });
+    
+                L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+                    maxZoom: 25,
+                    attribution: 'Datos del mapa de &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>, ' + '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' + 'Imágenes © <a href="https://www.mapbox.com/">Mapbox</a>', 
+                    id: 'mapbox/streets-v11'
+                }).addTo(mymap);
+    
+                L.Routing.control({
+                    waypoints: [
+                        L.latLng(latitude, longitude),
+                        L.latLng(36.59235, -6.23732)
+                        ],
+                    language: 'es'
+                }).addTo(mymap);
+                
+            });
+        }
+        else{
+            var mymap = L.map('mapa', {
+                center: [37.17059, -3.60552],
+                zoom: 17
+            });
+    
+            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+                maxZoom: 25,
+                attribution: 'Datos del mapa de &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>, ' + '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' + 'Imágenes © <a href="https://www.mapbox.com/">Mapbox</a>', 
+                id: 'mapbox/streets-v11'
+            }).addTo(mymap);
+        }
+    </script>   
+</head>
+<section id="div_seccion_principal">
+    <!--Div que tiene todo el contenido de la pagina principal-->
+                <div class="div_seccion_principal" >
+                <article>
+                    <header>
+                        <h1>Datos de contacto para el cliente:</h1>
+                    </header>
+                        <h5>Nombre: Alberto Arana Pinto</h5>
+                        <h5>E-mail: apa1993@hotmail.es</h5>
+                        <h5>Direccion: Calle Crucero Baleares, 23, 11500 El Puerto de Sta María, Cádiz</h5>
+                        <h5>Telefono: 675849302</h5>
+                </article>
+    <!-- Div mapa -->
+                <article>
+                    <header>
+                        <div id=""><h1>Mapa de acceso:</h1></div>
+                    </header>
+                    <div id="mapa">
+                    </div>
+                </article>
+                </div>
+        </section>

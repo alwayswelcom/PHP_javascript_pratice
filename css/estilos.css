@@ -1,0 +1,387 @@
+/* Declaración de codificación de caracteres */
+@charset "utf-8";
+/* Inicio del Documento CSS */
+
+/* Importación de Google Font "Open Sans" */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+
+html, body {
+	margin:0 auto;
+	padding:0px;
+	width:980px;
+	font-size:13px;
+	color:#3c3c3c;
+	font-family: Helvetica, sans-serif;
+/*background:url(../img/fondo.jpg) no-repeat fixed center top;*/
+	background-size:100% auto;
+	line-height:18px;
+}
+
+/* Modificación de comportamiento de los enlaces */
+a,a:visited{
+	text-decoration: none;
+}
+
+/* Modificación del comportamiento del encabezado 1 */
+h1 {
+	font-size: 35px;
+	color: #0D7A82  
+}
+
+h5 {
+	font-size: 20px;
+}
+
+h6 {
+	font-size: 15px;
+	color: #0D7A82 
+}
+
+/* Modificación del comportamiento de encabezados */
+h1,h2,h4 {
+	
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* Imagen de fondo */
+body {
+	background-color: #000000;
+	background-image: url(img/fondotec.jpg);
+	background-size: auto;
+	min-height: 100vh;
+	
+}
+
+/* Modificación del comportamiento de los párrafos */
+
+p {
+	text-align: justify;
+}
+
+/*Div que contiene la página*/
+
+.div_contenedor{
+	position:relative;
+	clear:both;
+}
+
+.div_contenedor section{
+	display:inline;
+}
+
+#div_seccion_principal{
+	height:auto;
+	border: 1px solid #E5E7E9;
+	border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+	margin: 30px;
+	margin-top: 60px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 30px;
+	background-color: #E5E7E9;
+}
+
+.div_login{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#div_formulario{
+	height:850px;
+	border: 1px solid black;
+	margin: 8px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 30px;
+}
+
+#imagenizquierda {
+	position:fixed;
+	float:left;
+	left:14px;
+	top: 200px;
+	width: 300px;
+	height: 600px;
+}
+
+#imagenderecha {
+	position:fixed;
+	right:-145px;
+	top:0px;
+	width: 600px;
+	height: 200px;
+}
+/*Fin del div que contiene la página*/
+
+/*Página principal*/
+
+#div_header{
+	clear:both;
+	box-sizing:border-box;
+	border:solid;
+	border-width:10px;
+	border-color:transparent;
+	background-color:#FFFFFF;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+}
+
+/* Style the navbar */
+#navbar {
+	overflow: hidden;
+	background-color: #AAB7B8 ;
+	border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+/* Navbar links */
+#navbar a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px;
+	text-decoration: none;
+  }
+  
+/* Page content */
+.content {
+	padding: 16px;
+  }
+  
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	max-width: 980px;
+  }
+  
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+	padding-top: 60px;
+  }
+
+/*Div del pie de página*/
+
+#div_footer { 
+	border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+	font-size:12px;
+	position:relative;
+	box-sizing:border-box;
+	clear:both;
+	color: #0D7A82 ;
+	text-align:center;
+	padding: 30px;
+	margin: 12px;
+	background-color: #E5E7E9 ;
+	
+}
+
+/* Div del menú de la página */
+.div_menu {
+	text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+	text-align:center;
+	margin-left:5px;
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+	color:white;
+}
+
+/* Estilos comunes de los botones de navegación */
+.boton,.boton:hover,.botonin,.botonin:hover {
+	text-shadow: 2px 1px rgba(0, 0, 0, 0.3);
+	text-align:center;
+	text-decoration: none;
+	display:inline-block;
+	width: 60px;
+	padding: 5px 30px ;
+	white-space: nowrap;
+	margin: 5px 5px 10px;
+	border: 1px solid black;
+	border-radius: 2px;
+}
+
+/* Estilos independientes de los botones de navegación */
+.boton{
+	background: rgb(255, 175, 122); /* Old browsers */
+	background: -moz-linear-gradient(top, #ffa47a 0%, #f89d60 44%, #ee9440 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #ffa47a 0%,#f89d60 44%,#ee9440 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #ffa47a 0%,#f89d60 44%,#ee9440 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+}
+
+.boton:hover{
+	background: #ffa47a;
+	font-size: 14px;
+}
+
+.botonin {
+	background: rgb(255, 175, 122); /* Old browsers */
+	background: -moz-linear-gradient(top, rgb(255, 164, 122) 0%, rgba(248, 157, 96) 31%, rgba(238, 148, 64) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(255, 164, 122) 0%,rgba(248, 157, 96) 31%,rgba(238, 148, 64) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(255, 164, 122) 0%,rgba(248, 157, 96) 31%,rgba(238, 148, 64) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5deea', endColorstr='#066dab',GradientType=0 ); /* IE6*/
+}
+
+.botonin:hover{
+	background: #ffa47a;
+	font-size: 14px;
+}
+
+/* Estilo de imágenes cuadradas artículos */
+#imagen_der {
+	float:right;
+	margin-left: 20px;
+}
+
+#imagen_der2 {
+	float:right;
+	margin-left: 15px;
+}
+
+#imagen_cen {
+	float: inherit;
+}
+
+#imagen_izq {
+	float:left;
+	margin-left: 10px;
+	margin-right:20px;
+	border: 1px solid #0D7A82 ;
+	border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 30px;
+	background-color: #FFFFFF;
+}
+
+/* Estilos de imágenes alargadas artículos */
+#imagen_long {
+	width: 600px;
+	height: 200px;
+	margin-left:100px;
+}
+
+#galeria {
+	margin-left:20px;
+}
+
+#galeria img {
+	width: 150px;
+	height: 150px;
+	border: 1px solid #110101;
+}
+
+/*******************************************************/
+/*  Inicio de definición de estilos para el formulario */
+/*******************************************************/
+
+.boton_form {
+	text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+	text-align:center;
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+	display:inline-block;
+	color: #FFF;
+	background: #ffa47a; 
+	padding: 6px 30px;
+	white-space: nowrap;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	margin: 10px 5px;
+	-webkit-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.morado{
+	background: #ffa47a;
+	border: 1px solid #ff5e14; 
+}
+
+.morado:hover{
+ 	background: #f89d60;
+}
+
+.caja_gris{
+	margin: 0 0 5px;
+	overflow: hidden;
+	padding: 4px;
+	background-color: #F2F2F2;
+	border: 1px solid #6E6E6E;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.formulario{
+	position:absolute;
+	margin-top: 270px;
+	margin-left: 140px;
+	padding-left: 80px;
+	margin-right: 140px;
+	padding-right: 120px;
+}
+
+.checkbox{
+	text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+	font-size: 15px;
+	color: #0D7A82  
+}
+
+input[type="text"], input[type="password"]{
+	outline: none;
+	padding: 20px;
+	display: block;
+	width: 300px;
+	border-radius: 3px;
+	border: 1px solid #eee;
+	margin: 20px auto;
+  }
+  
+  input[type="submit"] {
+	padding: 20px;
+	color: #fff;
+	background: #0098cb;
+	width: 320px;
+	margin: 20px auto;
+	margin-top: 0;
+	border: 0;
+	border-radius: 3px;
+	cursor: pointer;
+  }
+  input[type="submit"]:hover {
+	background-color: #00b8eb;
+  }
+
+#submit{
+padding: 20px;
+	color: #fff;
+	background: #0098cb;
+	width: 320px;
+	margin: 20px auto;
+	margin-top: 0;
+	border: 0;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+
+/****************************************************/
+/*  Fin de definición de estilos para el formulario */ 
+/****************************************************/
